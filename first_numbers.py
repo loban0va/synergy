@@ -14,15 +14,13 @@ def sum_negative_numbers(numbers):
     if num > max_num:
       max_num = num
       max_index = i
-  #print(min_num, max_num)
+  print(min_num, max_num)
   start_index = min(min_index, max_index) + 1
   end_index = max(min_index, max_index)
 
-  if start_index >= end_index:
-
   new_numbers = numbers[start_index:end_index]
-  return sum(num for num in numbers if num < 0)
+  return sum(num for num in new_numbers if num < 0)
 
-numbers = [1, 5, 10, -88, -30, 200, -5, -1, 9, -8, -3, -5]
+numbers = [100, 5, 10, 88, -30, -200, -5, -1, 9, -8, -3, -5]
 result = sum_negative_numbers(numbers)
 print(result)
